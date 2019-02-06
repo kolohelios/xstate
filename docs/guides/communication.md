@@ -395,7 +395,7 @@ const pingMachine = Machine({
       invoke: {
         id: 'pong',
         src: pongMachine
-      }
+      },
       // Sends 'PING' event to child machine with ID 'pong'
       onEntry: send('PING', { to: 'pong' }),
       on: {
