@@ -656,7 +656,8 @@ export class Interpreter<
   ): Interpreter<TChildContext, TChildStateSchema, TChildEvents> {
     const childService = new Interpreter(machine, {
       parent: this,
-      id: options.id || machine.id
+      id: options.id || machine.id,
+      devTools: false
     });
 
     childService

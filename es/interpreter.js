@@ -446,7 +446,8 @@ var Interpreter = /** @class */ /*#__PURE__*/function () {
         }
         var childService = new Interpreter(machine, {
             parent: this,
-            id: options.id || machine.id
+            id: options.id || machine.id,
+            devTools: false
         });
         childService.onDone(function (doneEvent) {
             _this.send(doneEvent); // todo: fix
